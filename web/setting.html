@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/css/main.css">
+    <script src="eel.js"></script>
+   
+</head>
+<body>
+  <div class="loader"></div>
+  <div class="settings">
+    <h2 class="setting-title">Setting</h2>
+    <h3 class="setting-punkt">Theam</h3>
+    <div class="radiobtn-punkt">
+        <div class="color-theam">
+            <input type="radio" name="theme" value="light" id="light-theme-radio">
+            <label for="light-theme-radio" class="radio-btn-theam">Light Theam</label><img src="img/ligth.svg" alt="light-theme">
+        </div>
+        <div class="color-theam">
+            <input type="radio" name="theme" value="dark" id="dark-theme-radio" checked>
+            <label for="dark-theme-radio" class="radio-btn-theam">Dark Theam </label> <img src="img/dark.svg" alt="dark-theme">
+        </div>
+    </div>
+    <h3 class="setting-punkt">Language</h3>
+    <div class="radiobtn-punkt">
+        <div class="color-theam">
+            <input type="radio" name="language" value="ukr" id="ukr-lang-radio" checked>
+            <label for="ukr-lang-radio" class="radio-btn-lang">Ukr Language</label><img src="img/ukr.svg" alt="light-theme">
+        </div>
+        <div class="color-theam">
+            <input type="radio" name="language" value="eng" id="eng-lang-radio">
+            <label for="eng-lang-radio" class="radio-btn-lang">Eng Language </label> <img src="img/eng.svg" alt="dark-theme">
+        </div>
+    </div>
+</div>   
+    <div id="myModal" class="modal">
+        <div class="modal-content">
+          <span class="close">&times;</span>
+          <h2>Instuctions Voice Assistant</h2>
+          <p>
+            Wake up the voice assistant by saying its name or a wake-up phrase, such as "Hey Siri" or "OK Google". <br />
+          </p>
+          <p>
+            Ask a question or make a request using natural language. For example, you might say "What's the weather like today?" or "Play some music by Taylor Swift." <br>
+          </p> 
+          <p>
+            Wait for the voice assistant to process your request and respond. The response may be spoken aloud or displayed on a screen, depending on the device you're using.<br>
+          </p>
+          <p>
+            Follow up with additional questions or requests as needed. For example, you might say "What about tomorrow's weather?" or "Skip this song."<br>
+          </p>
+          <p>
+            End the conversation by saying "thank you" or "goodbye" or simply stop speaking. Some voice assistants may automatically stop listening after a period of inactivity.<br>
+          </p>
+        </div>
+    </div>
+    <div class="navbar">
+        <div class="wrap">
+          <button id="info_btn" class="navbtn">
+            <img src="img/info.svg" alt="info">
+            <p>Info</p>
+          </button>
+          <a href="index.html" class="navbtn ntf">
+            <img src="img/home.svg" alt="home">
+            <p>Home</p>
+          </a>
+          <a  class="navbtn setting ntf"id="setting-link">
+           <img src="img/setting.svg" alt="setting">
+           <p>Setting</p>
+         </a>
+        </div>
+    </div>
+    <script src="js/app.js"></script>
+    <script>
+      window.addEventListener("load", () => {
+        const loader = document.querySelector(".loader");
+      
+        loader.classList.add("loader--hidden");
+      
+        loader.addEventListener("transitionend", () => {
+          document.body.removeChild(loader);
+        });
+      });
+    </script>
+</body>
+</html>
